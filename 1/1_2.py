@@ -1,3 +1,7 @@
+"""
+Identifies the first frequency that appears two times
+by repeating the input
+"""
 seen = {0: True}
 freq = 0
 found = False
