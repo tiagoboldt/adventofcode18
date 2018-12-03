@@ -4,7 +4,7 @@ identifies which set of strings have a letter two or three times and multiples t
 """
 two = 0
 three = 0
-with open('2.input') as f:
+with open('2/2.input') as f:
     for line in f:
         foundThree = False
         foundTwo = False

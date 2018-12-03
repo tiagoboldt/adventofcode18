@@ -5,7 +5,7 @@ by repeating the input
 seen = {0: True}
 freq = 0
 found = False
-with open('1.input') as f:
+with open('1/1.input') as f:
     input = [int(line) for line in f]
     while not found:
         for number in input:

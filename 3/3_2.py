@@ -19,7 +19,7 @@ class Config():
         self.height = int(match.group(5))
 
 
-with open('3.input') as f:
+with open('3/3.input') as f:
     for line in f:
         config = Config(line)
         for i in range(config.top, config.top+config.height):

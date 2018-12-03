@@ -4,7 +4,7 @@ Finds common string from two ID pairs
 """
 two = 0
 three = 0
-with open('2.input') as f:
+with open('2/2.input') as f:
     lines = [line for line in f]
     for i in range(len(lines)):
         reference = lines[i]
