@@ -1,6 +1,5 @@
 """
-Identifies which guard spleeps more often and multiples by the
-minute when he his most frequently asleep
+Identifies the guard that is most frequently asleep in a minute
 """
 
 import re
@@ -28,13 +27,15 @@ with open('4/4.input') as f:
                     guard_sleep[guard][i] += 1
                 sleep_minute = None
 
-    highest = 0
     best_guard = None
+    best_minute = 0
+    highest = 0
     for guard in guard_sleep:
-        guard_total = sum(guard_sleep[guard])
-        if guard_total > highest:
-            highest = guard_total
+        guard_highest = max(guard_sleep[guard])
+        if guard_highest > highest:
+            highest = guard_highest
             best_guard = guard
-
-    guard_max = max(guard_sleep[best_guard])
-    print(best_guard * guard_sleep[best_guard].index(guard_max))
+            best_minute = guard_sleep[guard].index(guard_highest)
+    print(best_guard)
+    print(best_minute)
+    print(best_guard * best_minute)
